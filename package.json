@@ -1,6 +1,6 @@
 {
   "name": "generate-react-ts-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/index",
   "bin": {
@@ -17,12 +17,12 @@
     "chalk": "^3.0.0",
     "inquirer": "^7.1.0",
     "ora": "^4.0.3",
-    "rollup": "^2.0.6"
+    "rollup": "^2.0.6",
+    "commander": "^5.0.0",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "commander": "^5.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "typescript": "^3.8.3"
+    "rollup-plugin-typescript": "^1.0.1"
   }
 }

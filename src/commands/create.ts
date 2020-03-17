@@ -38,7 +38,7 @@ const Create = ()=> {
     ]
     
     prompt(promptList).then( ( { name, version, description, keywords, frame })=>{
-        const input = cwd+'dist/templist/'+ frame
+        const input = cwd+'templist/'+ frame
         new Promise(res=> {
             checkDirectory(input ,cwd + name, copy )
             res()
