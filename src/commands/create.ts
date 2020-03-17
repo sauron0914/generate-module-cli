@@ -1,6 +1,11 @@
 import { prompt } from 'inquirer'
 import { checkDirectory, copy } from '../utils'
 import fs from 'fs'
+const path = require('path')
+
+function resolve(dir) {
+    return path.join(__dirname, '..', dir)
+}
 
 const cwd = process.cwd() + '/'
 const Create = ()=> {    
@@ -38,7 +43,7 @@ const Create = ()=> {
     ]
     
     prompt(promptList).then( ( { name, version, description, keywords, frame })=>{
-        const input = cwd+'templist/'+ frame
+        const input = resolve('templist/') + frame
         new Promise(res=> {
             checkDirectory(input ,cwd + name, copy )
             res()
