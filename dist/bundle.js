@@ -93,7 +93,7 @@ var Create = function () {
             type: 'list',
             name: 'frame',
             message: 'Choose your frame: ',
-            choices: ['react-ts', 'react-js', 'vue-ts', 'vue-js']
+            choices: ['react-init']
         }
     ];
     inquirer.prompt(promptList).then(function (_a) {

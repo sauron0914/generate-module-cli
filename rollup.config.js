@@ -3,7 +3,7 @@ import common from 'rollup-plugin-commonjs'
 import fs from 'fs'
 
 const cwd = process.cwd()
-const dist = cwd + '/dist/'
+const dist = cwd + '/dist'
 
 export const copy = (src,dst) => {
     let paths = fs.readdirSync(src); //同步读取当前目录
@@ -25,16 +25,17 @@ export const copy = (src,dst) => {
 
 export const checkDirectory = (src,dst,callback) => {
     fs.access(dst, fs.constants.F_OK, (err) => {
-        if(err){
+        if(err) {
             fs.mkdirSync(dst);
             callback(src,dst);
-        }else{
+        } else {
             callback(src,dst);
         }
     });
 }
 
 const SOURCES_DIRECTORY = cwd + '/src/templist';  //源目录
+fs.mkdirSync(dist);
 checkDirectory(SOURCES_DIRECTORY, dist+ "/templist",copy);
 
 
