@@ -1,5 +1,5 @@
 {
-  "name": "generate",
+  "name": "generate-react-ts-cli",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index",
